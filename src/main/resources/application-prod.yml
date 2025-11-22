@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}?useSSL=false&allowPublicKeyRetrieval=true
-    username: ${MYSQLUSER}
-    password: ${MYSQLPASSWORD}
+    url: ${DATABASE_URL}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -12,5 +12,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+
 server:
-  port: ${PORT}
+  port: ${PORT:8080}
+
+  
+  
+  
+ # IMPORTANT — Render environment variable
+  #In Render dashboard → "Environment Variables":
+  #SPRING_PROFILES_ACTIVE=prod
