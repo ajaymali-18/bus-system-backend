@@ -50,11 +50,11 @@
 			<optional>true</optional>
 		</dependency>
 		
-		<!-- PostgreSQL Driver -->
+<!-- PostgreSQL Driver -->
 <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
-    <optional>true</optional>
+    <version>42.7.3</version>
 </dependency>
 
 		<dependency>
